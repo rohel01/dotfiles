@@ -1,0 +1,27 @@
+[user]
+	name = Michaël Melchiore
+	email = michael@infiniteorbits.io
+[credential]
+	helper = keepassxc --git-groups
+[diff]
+	tool = kdiff3
+	guitool = kdiff3
+	colorMoved = default
+[merge]
+	tool = kdiff3
+[delta]
+	dark = true
+    side-by-side = true
+
+[mergetool "kdiff3"]
+    trustExitCode = false
+[difftool "kdiff3"]
+    trustExitCode = false
+[gc]
+	autoDetach = false
+[core]
+	editor = hx
+[pull]
+	rebase = true
+[init]
+	defaultBranch = main

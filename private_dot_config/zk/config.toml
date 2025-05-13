@@ -1,0 +1,12 @@
+[notebook]
+dir = "~/Documents/notes"
+
+[note]
+filename = "{{id}}-{{slug title}}"
+template = "default.md"
+id-charset = "hex"
+id-length = 8
+id-case = "lower"
+
+[tool]
+editor = "hx"

@@ -1,0 +1,16 @@
+
+[[index]]
+name = "pypi-proxi"
+url = "https://nexus.prd.infiniteorbits.io/repository/pypi-proxy/simple"
+default=true
+
+[[index]]
+name = "pypi-io"
+url = "https://nexus.prd.infiniteorbits.io/repository/pypi-io/simple"
+publish-url = "https://nexus.prd.infiniteorbits.io/repository/pypi-io/"
+
+[[index]]
+name = "pypi-external"
+url = "https://nexus.prd.infiniteorbits.io/repository/pypi-external/simple"
+publish-url = "https://nexus.prd.infiniteorbits.io/repository/pypi-external/"
+
