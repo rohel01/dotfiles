@@ -60,5 +60,6 @@ render = true
 
 [keys.normal.backspace]
 ret = ":run-shell-command zellij run -fc -- broot"
+C-ret = ":run-shell-command zellij run -fc -- xplr"
 space = ":run-shell-command zellij run -fc -- lazygit"
 C-space = ":run-shell-command zellij run -fc -- serie"

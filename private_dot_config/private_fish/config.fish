@@ -5,4 +5,8 @@ end
 set -gx LANG en_GB.UTF-8
 
 starship init fish | source
+direnv hook fish | source
+fzf --fish | source
+zoxide init fish | source
+
 alias zj="zellij -l welcome"

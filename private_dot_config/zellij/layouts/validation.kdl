@@ -1,48 +1,22 @@
 layout {
     cwd "/home/michael/proj"
-    tab name="yamcs-dbc" focus=true hide_floating_panes=true {
+    tab name="validation" hide_floating_panes=true {
         pane size=1 borderless=true {
             plugin location="zellij:tab-bar"
         }
-        pane command="uv" cwd="pfgen/yamcs-explore/yamcs-python" focus=true {
-            args "run" "hx" "."
-            start_suspended false
+        pane command="hx" cwd="pfgen/endurance-pl-obc-sw/validation/docs/grippertests" {
+            args "."
         }
         pane size=1 borderless=true {
             plugin location="zellij:status-bar"
         }
     }
-    tab name="flatsat-lib" hide_floating_panes=true {
+    tab name="requp" hide_floating_panes=true {
         pane size=1 borderless=true {
             plugin location="zellij:tab-bar"
         }
-        pane command="uv" cwd="forge/flatsat-lib" {
+        pane command="uv" cwd="forge/requp" {
             args "run" "hx" "."
-            start_suspended false
-        }
-        pane size=1 borderless=true {
-            plugin location="zellij:status-bar"
-        }
-    }
-    tab name="endurance-icd" hide_floating_panes=true {
-        pane size=1 borderless=true {
-            plugin location="zellij:tab-bar"
-        }
-        pane command="uv" cwd="pfgen/endurance-pl-obc-sw/validation/cases/endurance-db-icd" {
-            args "run" "hx" "."
-            start_suspended false
-        }
-        pane size=1 borderless=true {
-            plugin location="zellij:status-bar"
-        }
-    }
-    tab name="yamcs" hide_floating_panes=true {
-        pane size=1 borderless=true {
-            plugin location="zellij:tab-bar"
-        }
-        pane command="mvn" cwd="pfgen/yamcs-explore/yamcs-quickstart"{
-            args "yamcs:run"
-            start_suspended true
         }
         pane size=1 borderless=true {
             plugin location="zellij:status-bar"
@@ -52,7 +26,7 @@ layout {
         pane size=1 borderless=true {
             plugin location="zellij:tab-bar"
         }
-        pane cwd="/home/michael/proj/pfgen/yamcs-explore"
+        pane
         pane size=1 borderless=true {
             plugin location="zellij:status-bar"
         }
@@ -209,61 +183,61 @@ layout {
     }
     swap_floating_layout name="enlarged" {
         floating_panes max_panes=10 {
-            pane cwd="/home/michael/proj" {
+            pane {
                 height "90%"
                 width "90%"
                 x "5%"
                 y 1
             }
-            pane cwd="/home/michael/proj" {
+            pane {
                 height "90%"
                 width "90%"
                 x "5%"
                 y 2
             }
-            pane cwd="/home/michael/proj" {
+            pane {
                 height "90%"
                 width "90%"
                 x "5%"
                 y 3
             }
-            pane cwd="/home/michael/proj" {
+            pane {
                 height "90%"
                 width "90%"
                 x "5%"
                 y 4
             }
-            pane cwd="/home/michael/proj" {
+            pane {
                 height "90%"
                 width "90%"
                 x "5%"
                 y 5
             }
-            pane cwd="/home/michael/proj" {
+            pane {
                 height "90%"
                 width "90%"
                 x "5%"
                 y 6
             }
-            pane cwd="/home/michael/proj" {
+            pane {
                 height "90%"
                 width "90%"
                 x "5%"
                 y 7
             }
-            pane cwd="/home/michael/proj" {
+            pane {
                 height "90%"
                 width "90%"
                 x "5%"
                 y 8
             }
-            pane cwd="/home/michael/proj" {
+            pane {
                 height "90%"
                 width "90%"
                 x "5%"
                 y 9
             }
-            pane cwd="/home/michael/proj" {
+            pane {
                 height "90%"
                 width "90%"
                 x 10
@@ -273,60 +247,60 @@ layout {
     }
     swap_floating_layout name="spread" {
         floating_panes max_panes=1 {
-            pane cwd="/home/michael/proj" {
+            pane {
                 x "50%"
                 y "50%"
             }
         }
         floating_panes max_panes=2 {
-            pane cwd="/home/michael/proj" {
+            pane {
                 width "45%"
                 x "1%"
                 y "25%"
             }
-            pane cwd="/home/michael/proj" {
+            pane {
                 width "45%"
                 x "50%"
                 y "25%"
             }
         }
         floating_panes max_panes=3 {
-            pane cwd="/home/michael/proj" {
+            pane {
                 height "45%"
                 width "45%"
                 y "55%"
             }
-            pane cwd="/home/michael/proj" {
+            pane {
                 width "45%"
                 x "1%"
                 y "1%"
             }
-            pane cwd="/home/michael/proj" {
+            pane {
                 width "45%"
                 x "50%"
                 y "1%"
             }
         }
         floating_panes max_panes=4 {
-            pane cwd="/home/michael/proj" {
+            pane {
                 height "45%"
                 width "45%"
                 x "1%"
                 y "55%"
             }
-            pane cwd="/home/michael/proj" {
+            pane {
                 height "45%"
                 width "45%"
                 x "50%"
                 y "55%"
             }
-            pane cwd="/home/michael/proj" {
+            pane {
                 height "45%"
                 width "45%"
                 x "1%"
                 y "1%"
             }
-            pane cwd="/home/michael/proj" {
+            pane {
                 height "45%"
                 width "45%"
                 x "50%"
@@ -335,3 +309,4 @@ layout {
         }
     }
 }
+
