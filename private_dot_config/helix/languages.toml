@@ -9,7 +9,7 @@ command = "clippy"
 [[language]]
 name = "python"
 language-servers = ["basedpyright", "ruff", "typos"]
-auto-format = true
+auto-format = false
 [language-server.ruff]
 command = "ruff"
 args = ["server"]
