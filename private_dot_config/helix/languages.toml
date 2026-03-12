@@ -1,55 +1,53 @@
-[[language]]
-name = "rust"
-auto-format = true
-language-servers = ["rust-analyzer", "typos"]
-
 [language-server.rust-analyzer.config.check]
 command = "clippy"
 
-[[language]]
-name = "python"
-language-servers = ["basedpyright", "ruff", "typos"]
-auto-format = false
-[language-server.ruff]
-command = "ruff"
-args = ["server"]
-[language-server.basedpyright.config.basedpyright.analysis]
-typeCheckingMode = "basic"
-
-[language-server.typos]
-command = "typos-lsp"
-config.diagnosticSeverity = "Hint"
+# [language-server.basedpyright.config.basedpyright.analysis]
+# typeCheckingMode = "basic"
 
 [[language]]
 name = "c"
-language-servers = ["clangd", "typos"]
+language-servers = ["clangd", "typos", "harper-ls-code"]
 
 [[language]]
 name = "cpp"
-language-servers = ["clangd", "typos"]
+language-servers = ["clangd", "typos", "harper-ls-code"]
+
+[[language]]
+name = "rust"
+auto-format = true
+language-servers = ["rust-analyzer", "typos", "harper-ls-code"]
+
+[[language]]
+name = "python"
+language-servers = ["ty", "ruff", "typos", "harper-ls-code"]
+auto-format = false
 
 [[language]]
 name = "markdown"
-language-servers = ["marksman", "typos"]
+language-servers = ["marksman", "harper-ls"]
 
 [[language]]
 name = "toml"
 formatter = { command = "taplo", args = ["fmt", "-"] }
-language-servers = ["taplo", "typos"]
+language-servers = ["taplo", "harper-ls"]
 
-[language-server]
-jdtls = { command = "jdtls" }
-language-server = { command = "jdtls", args = [
-  "-data", "/home/melchiore/.cache/jdtls/workspace" ]}
+[language-server.harper-ls.config.harper-ls]
+dialect = "British"
 
-# [language-server.jdtls.config.java.inlayHints]
-# parameterNames.enabled = "all"
+# A specific Harper config for code analyses
+[language-server.harper-ls-code]
+command = "harper-ls"
+args = ["--stdio"]
+[language-server.harper-ls-code.config.harper-ls]
+dialect = "British"
+[language-server.harper-ls-code.config.harper-ls.linters]
+ExpandParameter = false
+MassNouns = false
+# Harper spellcheck is not excellent with code comments. We use typos instead
+SpellCheck = false
+SentenceCapitalization = false
+ToDoHyphen = false
 
-[[language]]
-name = "java"
-scope = "source.java"
-injection-regex = "java"
-file-types = ["java"]
-roots = ["pom.xml", "build.gradle", ]
-indent = { tab-width = 4, unit = "    " }
-language-servers = [ "jdtls", "typos" ]
+[language-server.typos]
+command = "typos-lsp"
+config.diagnosticSeverity = "Hint"

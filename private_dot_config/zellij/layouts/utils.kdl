@@ -14,8 +14,14 @@ layout {
     tab name="updates" focus=true {
         pane split_direction="vertical" {
             pane command="apt-update.sh" size="50%"
-            pane command="cargo" size="50%" {
-                args "install-update" "-a"
+            pane size="50%" {
+                pane command="cargo" size="50%" {
+                    args "install-update" "-a"
+                }
+                pane command="uv" size="50%" {
+                    args "tool" "upgrade" "--all" "--no-build"
+                    start_suspended true
+                }
             }
         }
         pane size=1 borderless=true {
